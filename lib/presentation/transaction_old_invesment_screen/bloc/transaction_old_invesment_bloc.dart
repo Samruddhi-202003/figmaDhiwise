@@ -1,0 +1,10 @@
+import 'package:equatable/equatable.dart';import 'package:flutter/material.dart';import '/core/app_export.dart';import 'package:samruddhi_s_application1/presentation/transaction_old_invesment_screen/models/transaction_old_invesment_model.dart';part 'transaction_old_invesment_event.dart';part 'transaction_old_invesment_state.dart';/// A bloc that manages the state of a TransactionOldInvesment according to the event that is dispatched to it.
+class TransactionOldInvesmentBloc extends Bloc<TransactionOldInvesmentEvent, TransactionOldInvesmentState> {TransactionOldInvesmentBloc(TransactionOldInvesmentState initialState) : super(initialState) { on<TransactionOldInvesmentInitialEvent>(_onInitialize); on<ChangeCheckBoxEvent>(_changeCheckBox); on<ChangeDropDownEvent>(_changeDropDown); on<ChangeDropDown1Event>(_changeDropDown1); }
+
+_changeCheckBox(ChangeCheckBoxEvent event, Emitter<TransactionOldInvesmentState> emit, ) { emit(state.copyWith(old: event.value)); } 
+_changeDropDown(ChangeDropDownEvent event, Emitter<TransactionOldInvesmentState> emit, ) { emit(state.copyWith(selectedDropDownValue: event.value)); } 
+_changeDropDown1(ChangeDropDown1Event event, Emitter<TransactionOldInvesmentState> emit, ) { emit(state.copyWith(selectedDropDownValue1: event.value)); } 
+List<SelectionPopupModel> fillDropdownItemList() { return [SelectionPopupModel(id: 1, title: "Item One", isSelected: true), SelectionPopupModel(id: 2, title: "Item Two"), SelectionPopupModel(id: 3, title: "Item Three")]; } 
+List<SelectionPopupModel> fillDropdownItemList1() { return [SelectionPopupModel(id: 1, title: "Item One", isSelected: true), SelectionPopupModel(id: 2, title: "Item Two"), SelectionPopupModel(id: 3, title: "Item Three")]; } 
+_onInitialize(TransactionOldInvesmentInitialEvent event, Emitter<TransactionOldInvesmentState> emit, ) async  { emit(state.copyWith(priyanaksmarriaController: TextEditingController(), dateController: TextEditingController(), old: false)); emit(state.copyWith(transactionOldInvesmentModelObj: state.transactionOldInvesmentModelObj?.copyWith(dropdownItemList: fillDropdownItemList(), dropdownItemList1: fillDropdownItemList1()))); } 
+ }

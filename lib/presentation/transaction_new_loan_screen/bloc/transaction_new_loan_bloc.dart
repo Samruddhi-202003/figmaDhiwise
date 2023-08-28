@@ -1,0 +1,5 @@
+import 'package:equatable/equatable.dart';import 'package:flutter/material.dart';import '/core/app_export.dart';import 'package:samruddhi_s_application1/presentation/transaction_new_loan_screen/models/transaction_new_loan_model.dart';part 'transaction_new_loan_event.dart';part 'transaction_new_loan_state.dart';/// A bloc that manages the state of a TransactionNewLoan according to the event that is dispatched to it.
+class TransactionNewLoanBloc extends Bloc<TransactionNewLoanEvent, TransactionNewLoanState> {TransactionNewLoanBloc(TransactionNewLoanState initialState) : super(initialState) { on<TransactionNewLoanInitialEvent>(_onInitialize); }
+
+_onInitialize(TransactionNewLoanInitialEvent event, Emitter<TransactionNewLoanState> emit, ) async  { emit(state.copyWith(typeofloanController: TextEditingController(), priceController: TextEditingController(), priceController1: TextEditingController(), formsavingsController: TextEditingController(), dateController: TextEditingController(), dateController1: TextEditingController())); } 
+ }

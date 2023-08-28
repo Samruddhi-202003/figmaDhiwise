@@ -1,0 +1,5 @@
+import 'package:equatable/equatable.dart';import 'package:flutter/material.dart';import '/core/app_export.dart';import 'package:samruddhi_s_application1/presentation/transaction_add_insurance_screen/models/transaction_add_insurance_model.dart';part 'transaction_add_insurance_event.dart';part 'transaction_add_insurance_state.dart';/// A bloc that manages the state of a TransactionAddInsurance according to the event that is dispatched to it.
+class TransactionAddInsuranceBloc extends Bloc<TransactionAddInsuranceEvent, TransactionAddInsuranceState> {TransactionAddInsuranceBloc(TransactionAddInsuranceState initialState) : super(initialState) { on<TransactionAddInsuranceInitialEvent>(_onInitialize); }
+
+_onInitialize(TransactionAddInsuranceInitialEvent event, Emitter<TransactionAddInsuranceState> emit, ) async  { emit(state.copyWith(lifeinsuranceController: TextEditingController(), formsavingsController: TextEditingController(), monthlyController: TextEditingController(), amountController: TextEditingController(), dateController: TextEditingController(), dateController1: TextEditingController())); } 
+ }

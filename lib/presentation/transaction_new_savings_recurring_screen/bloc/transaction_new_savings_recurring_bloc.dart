@@ -1,0 +1,5 @@
+import 'package:equatable/equatable.dart';import 'package:flutter/material.dart';import '/core/app_export.dart';import 'package:samruddhi_s_application1/presentation/transaction_new_savings_recurring_screen/models/transaction_new_savings_recurring_model.dart';part 'transaction_new_savings_recurring_event.dart';part 'transaction_new_savings_recurring_state.dart';/// A bloc that manages the state of a TransactionNewSavingsRecurring according to the event that is dispatched to it.
+class TransactionNewSavingsRecurringBloc extends Bloc<TransactionNewSavingsRecurringEvent, TransactionNewSavingsRecurringState> {TransactionNewSavingsRecurringBloc(TransactionNewSavingsRecurringState initialState) : super(initialState) { on<TransactionNewSavingsRecurringInitialEvent>(_onInitialize); }
+
+_onInitialize(TransactionNewSavingsRecurringInitialEvent event, Emitter<TransactionNewSavingsRecurringState> emit, ) async  { emit(state.copyWith(savingtypevalueController: TextEditingController(), dateController: TextEditingController(), dateController1: TextEditingController(), rateofinterestvController: TextEditingController(), amountController: TextEditingController())); } 
+ }
