@@ -1,0 +1,5 @@
+import 'package:equatable/equatable.dart';import 'package:flutter/material.dart';import '/core/app_export.dart';import 'package:samruddhi_s_application1/presentation/transaction_new_invesment_screen/models/transaction_new_invesment_model.dart';part 'transaction_new_invesment_event.dart';part 'transaction_new_invesment_state.dart';/// A bloc that manages the state of a TransactionNewInvesment according to the event that is dispatched to it.
+class TransactionNewInvesmentBloc extends Bloc<TransactionNewInvesmentEvent, TransactionNewInvesmentState> {TransactionNewInvesmentBloc(TransactionNewInvesmentState initialState) : super(initialState) { on<TransactionNewInvesmentInitialEvent>(_onInitialize); }
+
+_onInitialize(TransactionNewInvesmentInitialEvent event, Emitter<TransactionNewInvesmentState> emit, ) async  { emit(state.copyWith(formsavingsController: TextEditingController(), typeofgoalController: TextEditingController(), lumpsumController: TextEditingController(), dateController: TextEditingController())); } 
+ }

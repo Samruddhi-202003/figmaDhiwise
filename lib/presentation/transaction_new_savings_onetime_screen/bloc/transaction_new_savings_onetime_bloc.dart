@@ -1,0 +1,5 @@
+import 'package:equatable/equatable.dart';import 'package:flutter/material.dart';import '/core/app_export.dart';import 'package:samruddhi_s_application1/presentation/transaction_new_savings_onetime_screen/models/transaction_new_savings_onetime_model.dart';part 'transaction_new_savings_onetime_event.dart';part 'transaction_new_savings_onetime_state.dart';/// A bloc that manages the state of a TransactionNewSavingsOnetime according to the event that is dispatched to it.
+class TransactionNewSavingsOnetimeBloc extends Bloc<TransactionNewSavingsOnetimeEvent, TransactionNewSavingsOnetimeState> {TransactionNewSavingsOnetimeBloc(TransactionNewSavingsOnetimeState initialState) : super(initialState) { on<TransactionNewSavingsOnetimeInitialEvent>(_onInitialize); }
+
+_onInitialize(TransactionNewSavingsOnetimeInitialEvent event, Emitter<TransactionNewSavingsOnetimeState> emit, ) async  { emit(state.copyWith(paymentformvaluController: TextEditingController(), savingtypevalueController: TextEditingController(), dateController: TextEditingController(), rateofinterestvController: TextEditingController(), amountController: TextEditingController())); } 
+ }
